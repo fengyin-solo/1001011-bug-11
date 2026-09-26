@@ -33,3 +33,16 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+.filter-item input, .filter-item select { border: 1px solid var(--border); border-radius: 6px; padding: 5px 8px; font-size: 13px; }
+.muted-text { color: var(--muted); font-size: 12px; }
+.required-mark { color: #b42318; font-style: normal; margin-left: 2px; }
+.dialog-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: flex; align-items: center; justify-content: center; z-index: 30; }
+.dialog { background: #fff; border-radius: 10px; padding: 18px 20px; width: 460px; max-width: calc(100vw - 40px); max-height: calc(100vh - 60px); overflow: auto; box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18); }
+.dialog-title { margin: 0 0 12px; font-size: 16px; }
+.form-item { display: block; margin-bottom: 10px; }
+.form-item span { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.form-item input, .form-item select, .form-item textarea { width: 100%; border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 13px; font-family: inherit; }
+.dialog-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+.detail-grid { display: grid; grid-template-columns: 96px 1fr; gap: 6px 12px; margin: 0 0 8px; font-size: 13px; }
+.detail-grid dt { color: var(--muted); }
+.detail-grid dd { margin: 0; }

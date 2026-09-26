@@ -7,6 +7,7 @@ const Tunnel = () => import('@/views/tunnel/index.vue')
 const Pavement = () => import('@/views/pavement/index.vue')
 const Patrol = () => import('@/views/patrol/index.vue')
 const Disease = () => import('@/views/disease/index.vue')
+const DiseaseDetail = () => import('@/views/disease/detail.vue')
 const Repair = () => import('@/views/repair/index.vue')
 const Material2 = () => import('@/views/material2/index.vue')
 const Machine = () => import('@/views/machine/index.vue')
@@ -32,6 +33,7 @@ const router = createRouter({
     { path: '/pavement', name: 'pavement', component: Pavement },
     { path: '/patrol', name: 'patrol', component: Patrol },
     { path: '/disease', name: 'disease', component: Disease },
+    { path: '/disease/:id', name: 'disease-detail', component: DiseaseDetail },
     { path: '/repair', name: 'repair', component: Repair },
     { path: '/material2', name: 'material2', component: Material2 },
     { path: '/machine', name: 'machine', component: Machine },

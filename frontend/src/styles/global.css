@@ -33,3 +33,35 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+.success-text { color: #067647; }
+
+/* 弹窗与表单：各业务模块共用 */
+.modal-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.modal { background: #fff; border-radius: 10px; width: 560px; max-width: calc(100vw - 32px); max-height: calc(100vh - 64px); display: flex; flex-direction: column; box-shadow: 0 18px 48px rgba(15, 23, 42, 0.25); }
+.modal.wide { width: 720px; }
+.modal-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--border); }
+.modal-head h3 { margin: 0; font-size: 15px; }
+.modal-close { border: none; background: none; font-size: 18px; line-height: 1; color: var(--muted); cursor: pointer; }
+.modal-body { padding: 16px 18px; overflow: auto; }
+.modal-foot { display: flex; justify-content: flex-end; gap: 8px; padding: 12px 18px; border-top: 1px solid var(--border); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; }
+.form-grid .span-2 { grid-column: 1 / -1; }
+.form-field { display: flex; flex-direction: column; gap: 4px; }
+.form-field label { font-size: 12px; color: var(--muted); }
+.form-field label .req { color: #b42318; margin-left: 2px; }
+.form-field input, .form-field select, .form-field textarea { border: 1px solid var(--border); border-radius: 6px; padding: 7px 9px; font-size: 13px; font-family: inherit; }
+.form-field textarea { resize: vertical; min-height: 84px; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: var(--brand); }
+.form-field input[readonly], .form-field textarea[readonly] { background: #f1f5f9; color: var(--muted); }
+.form-error { margin: 10px 0 0; font-size: 12px; color: #b42318; }
+.readonly-note { margin: 0 0 12px; padding: 8px 10px; border-radius: 6px; background: #f1f5f9; color: var(--muted); font-size: 12px; }
+
+/* 状态与等级标记 */
+.status-tag { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; white-space: nowrap; }
+.tag-pending { background: #fef3c7; color: #92400e; }
+.tag-processing { background: #dbeafe; color: #1e40af; }
+.tag-closed { background: #dcfce7; color: #166534; }
+.sev-high { color: #b42318; font-weight: 600; }
+.sev-mid { color: #b45309; }
+.sev-low { color: #067647; }
+.link[disabled] { color: #94a3b8; cursor: not-allowed; }
